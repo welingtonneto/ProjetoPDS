@@ -1,0 +1,49 @@
+﻿<Page x:Class="System_Biblioteca.Views.Pages.GenLeitorFormPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:System_Biblioteca.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1050" d:DesignWidth="1920"
+      Title="GenLeitorFormPage">
+
+    <Grid Background="Aqua">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Lista de Leitores" FontSize="25" Margin="0 10 0 0"
+                       Background="Aqua"
+                       HorizontalAlignment="Center"
+                       Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                       Padding="1"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dataGridLeitor" Grid.Row="1" IsReadOnly="true" Foreground="White" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome" Binding="{Binding NomeLeitor}" Foreground="Black" FontSize="18" Width="300"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding EmailLeitor}" Foreground="Black" FontSize="18" Width="300"/>
+                <DataGridTextColumn Header="Cpf" Binding="{Binding CpfLeitor}" Foreground="Black" FontSize="18" Width="200"/>
+                <DataGridTextColumn Header="Rg" Binding="{Binding RgLeitor}" Foreground="Black" FontSize="18" Width="150"/>
+                <DataGridTextColumn Header="Telefone" Binding="{Binding TelefoneLeitor}" Foreground="Black" FontSize="18" Width="200"/>
+
+                <DataGridTemplateColumn Header="Ações" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnExcluirLeitor" Foreground="White" FontSize="14" Width="80"
+                                        Click="btnExcluirLeitor_Click"
+                                        Content="Deletar"
+                                        ToolTip="Excluir Registro"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
