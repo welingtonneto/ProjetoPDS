@@ -33,14 +33,14 @@
                 <DataGridTextColumn Header="Turno" Binding="{Binding Turno}" Foreground="Black" FontSize="18" Width="150"/>
 
 
-                <DataGridTemplateColumn Header="Ações" Width="150">
+                <DataGridTemplateColumn Header="Ações" Width="200">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnEditarFuncionario" Content="Editar" FontSize="14" Width="80"
+                                        ToolTip="Editar Registro" Click="btnEditarFuncionario_Click"/>
                                 <Button x:Name="btnExcluirFuncionario" Content="Deletar" FontSize="14" Width="80"
                                         Click="btnExcluirFuncionario_Click" ToolTip="Excluir Registro"/>
-                                
-
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

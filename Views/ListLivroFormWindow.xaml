@@ -29,6 +29,32 @@
                        Padding="1"/>
         </StackPanel>
 
-        
+        <DataGrid x:Name="dataGridLivro" Grid.Row="1" IsReadOnly="true" Foreground="White" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Código" Binding="{Binding NomeFuncionario}" Foreground="Black" FontSize="18" Width="200"/>
+                <DataGridTextColumn Header="Título" Binding="{Binding EmailFuncionario}" Foreground="Black" FontSize="18" Width="200"/>
+                <DataGridTextColumn Header="Sinopse" Binding="{Binding CpfFuncionario}" Foreground="Black" FontSize="18" Width="150"/>
+                <DataGridTextColumn Header="Localização" Binding="{Binding RgFuncionario}" Foreground="Black" FontSize="18" Width="150"/>
+                <DataGridTextColumn Header="Edição" Binding="{Binding Turno}" Foreground="Black" FontSize="18" Width="150"/>
+
+
+                <DataGridTemplateColumn Header="Ações" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnExcluirLivro" Foreground="Black" FontSize="18" Width="200"
+                                Content="Deletar"
+                                ToolTip="Excluir Registro"/>
+                                <Button x:Name="btnEditarLivro" Foreground="Black" FontSize="18" Width="200"
+                                Content="Deletar"
+                                ToolTip="Excluir Registro"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridCheckBoxColumn/>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>

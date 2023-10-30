@@ -81,7 +81,7 @@
             <DatePicker x:Name="dtpDataNascFuncionario" Background="White" Width="363" Padding="10" HorizontalAlignment="Right" Margin="0 10 0 0"/>
 
             <TextBlock Text="Turno:" FontSize="20" Margin="0 65 90 0" Width="227"/>
-            <ComboBox x:Name="cmbTurnoFuncionario" Padding="10" Width="359" HorizontalAlignment="Right" Margin="0 0 0 0">
+            <ComboBox x:Name="cmbTurnoFuncionario" Padding="10" Width="359" HorizontalAlignment="Right" Margin="0 0 0 0" SelectionChanged="cmbTurnoFuncionario_SelectionChanged">
                 <ComboBoxItem Content="Manhã"/>
                 <ComboBoxItem Content="Tarde"/>
                 <ComboBoxItem Content="Noite"/>

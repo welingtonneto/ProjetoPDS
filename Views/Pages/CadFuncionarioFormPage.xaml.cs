@@ -39,13 +39,14 @@ namespace System_Biblioteca.Views.Pages
             _funcionario.EnderecoFuncionario = txtEndereco.Text;
             _funcionario.TelefoneFuncionario = txtTelefone.Text;
             _funcionario.Turno = cmbTurnoFuncionario.Text;
-            if (_funcionario.SexoFuncinario == "Feminino")
+            if (rdbtFeminino.IsChecked == true)
             {
-                rdbtFeminino.IsChecked = true;
+                _funcionario.SexoFuncionario = "Feminino";
+
             }
             else
             {
-                rdbtMasculino.IsChecked = true;
+                _funcionario.SexoFuncionario = "Masculino";
             }
             _funcionario.DataNascimentoFuncionario = dtpDataNascFuncionario.SelectedDate;
 
@@ -82,6 +83,11 @@ namespace System_Biblioteca.Views.Pages
 
                 }
             }
+        }
+
+        private void cmbTurnoFuncionario_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System_Biblioteca.Views;
 using System_Biblioteca.Models;
+using MaterialDesignThemes.Wpf;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -68,6 +69,14 @@ namespace System_Biblioteca.Views.Pages
             {
                 MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void btnEditarFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            var funcionario = dataGridFuncionario.SelectedItem as Funcionario;
+
+            var janela = new CadFuncionario(funcionario.Id);
+            janela.ShowDialog();
         }
     }
 }

@@ -34,7 +34,11 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button x:Name="btnExcluirFuncionario" Foreground="Black" FontSize="18" Width="200"
+                                <Button x:Name="btnEditarFuncionario" Foreground="Black" FontSize="9" Width="100"
+                                        Click="btnExcluirFuncionario_Click"
+                                        Content="Editar"
+                                        ToolTip="Editar Registro"/>
+                                <Button x:Name="btnExcluirFuncionario" Foreground="Black" FontSize="9" Width="100"
                                         Click="btnExcluirFuncionario_Click"
                                         Content="Deletar"
                                         ToolTip="Excluir Registro"/>
@@ -42,6 +46,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <DataGridCheckBoxColumn/>
             </DataGrid.Columns>
         </DataGrid>
 

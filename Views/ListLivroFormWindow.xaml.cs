@@ -32,7 +32,12 @@ namespace System_Biblioteca.Views
         }
         private void CarregarListagem()
         {
-            
+            var dao = new LivroDAO();
+
+            foreach(var livro in dao.List())
+            {
+                MessageBox.Show(livro.TituloLivro);
+            }
         }
     }
 }
